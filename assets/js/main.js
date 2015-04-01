@@ -7,9 +7,19 @@ $(function(){
 	$('.ui.dropdown').dropdown();
 	
 	$('#areaDoFormPessoaFisica').hide();
+	$('#areaDoFormPessoaJuridica').hide();
 
 	$('#irParaCadastroPessoal').click(function () {
 			$('#areaDoFormPessoaFisica').show();		
+			$('#areaDoFormPessoaJuridica').hide();		
+	});
+	$('#irParaCadastroPessoaJuridica').click(function () {
+			$('#areaDoFormPessoaFisica').hide();		
+			$('#areaDoFormPessoaJuridica').show();		
+	});
+	$('#portalAdministrativo').click(function () {
+			$('#areaDoFormPessoaFisica').hide();		
+			$('#areaDoFormPessoaJuridica').hide();		
 	});
 
 	$('.ui.form').form({

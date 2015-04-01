@@ -22,7 +22,7 @@
 				<p></p>
 					<div class="ui tiered menu" >
 						<div class="ui small menu">
-				  <a class="active item">
+				  <a class="active item" id="portalAdministrativo">
 				    <i class="home icon"></i>Portal Administrativo
 				  </a>
 				   <div class="right menu">
@@ -53,6 +53,7 @@
 												class="dropdown icon"></i></span>
 											<div class="menu">
 												<a id="irParaCadastroPessoal"class="item sessao" contextmenu="pessoal">Pessoal</a>
+												<a class="item sessao" contextmenu="juridico" id="irParaCadastroPessoaJuridica">Jurídico</a>
 											</div>
 										</div>
 										<div class="ui simple dropdown item">
@@ -151,6 +152,16 @@
 		<input name="endereco" placeholder="Endereço" type="text">
 		</div>
 	  <div id="butaoPessoaFisica" class="ui submit button">Submit</div>
+	</form>
+</div>
+
+<div id="areaDoFormPessoaJuridica">
+	<form id="formPessoajuridica" class="ui error form segment">
+	  	<div class="ui error message">
+		    <div class="header">Action Forbidden</div>
+		    <p>You can only sign up for an account once with a given e-mail address.</p>
+	 	</div>
+	  <div id="butaoPessoaJuridica" class="ui submit button">Submit</div>
 	</form>
 </div>
 </body>
