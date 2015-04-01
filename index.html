@@ -112,15 +112,19 @@
     <input placeholder="Username" type="text">
   </div>
   <div class="field">
-    <label>Password</label>
-    <input type="password" name="password">
-  </div>
-  <div class="inline field">
-    <div class="ui checkbox">
-      <input type="checkbox" name="terms">
-      <label>I agree to the Terms and Conditions</label>
-    </div>
-  </div>
+		<label for="Cidadao-estadoCivil">Estado Civil</label>
+		<div class="ui selection dropdown">
+			<input type="hidden" name="Cidadao-estadoCivil">
+			<i class="dropdown icon"></i>
+			<div class="default text">Estado Civil</div>
+			<div class="menu">
+				<div class="item" data-value="CASADO">CASADO</div>
+				<div class="item" data-value="DIVORCIADO">DIVORCIADO</div>
+				<div class="item" data-value="SOLTEIRO">SOLTEIRO</div>
+				<div class="item" data-value="VIUVO">VIUVO</div>
+			</div>
+		</div>
+	</div>
   <div class="field">
 		<label >Data de Nascimento</label>
 		<input name="dataNascimentoPessoaFisica" id ="dataNascimentoPessoaFisica" placeholder="dd/mm/aaaa" type="text" class="dataNascimentoPessoaFisica">
