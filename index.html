@@ -7,7 +7,10 @@
 	<script type="text/javascript" src="assets/js/main.js"></script>
 	
 	<script type="text/javascript" src="Semantic-UI-1.11.6/dist/semantic.min.js"></script>
+	<script type="text/javascript" src="assets/js/additional-methods.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
 	<link rel="stylesheet" href="Semantic-UI-1.11.6/dist/semantic.min.css">
+	<link rel="import" href="form.html">
 
 </head>
 <body>
@@ -76,10 +79,56 @@
 								</div>
 							</div>
 						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<form id="formPessoaFisica" class="ui error form segment">
+  <div class="ui error message">
+    <div class="header">Action Forbidden</div>
+    <p>You can only sign up for an account once with a given e-mail address.</p>
+  </div>
+    <div class="field">
+      <label>Name</label>
+      <input placeholder="Name" type="text" name = "name">
+    </div>
+  <div class="field">
+    <label>Gender</label>
+    <div class="ui selection dropdown">
+      <div class="default text">Select Gender</div>
+      <i class="dropdown icon"></i>
+      <input type="hidden" name="gender">
+      <div class="menu">
+        <div class="item" data-value="male">Male</div>
+        <div class="item" data-value="female">Female</div>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <label>Username</label>
+    <input placeholder="Username" type="text">
+  </div>
+  <div class="field">
+    <label>Password</label>
+    <input type="password" name="password">
+  </div>
+  <div class="inline field">
+    <div class="ui checkbox">
+      <input type="checkbox" name="terms">
+      <label>I agree to the Terms and Conditions</label>
+    </div>
+  </div>
+  <div class="field">
+		<label >Data de Nascimento</label>
+		<input name="dataNascimentoPessoaFisica" id ="dataNascimentoPessoaFisica" placeholder="dd/mm/aaaa" type="text" class="dataNascimentoPessoaFisica">
+		<div id="msgData_Cidadao-dataDeNascimento" class="mensagemErro">
+			
+		</div>
+   </div>
+  <div id="butaoPessoaFisica" class="ui submit button">Submit</div>
+</form>
 </body>
 </html>
