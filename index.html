@@ -52,7 +52,7 @@
 											<span class="aplicativo" contextmenu='semas'>SEMAS <i
 												class="dropdown icon"></i></span>
 											<div class="menu">
-												<a class="item sessao" contextmenu="pessoal">Pessoal</a>
+												<a id="irParaCadastroPessoal"class="item sessao" contextmenu="pessoal">Pessoal</a>
 											</div>
 										</div>
 										<div class="ui simple dropdown item">
@@ -86,53 +86,72 @@
 	</div>
 </div>
 
-<form id="formPessoaFisica" class="ui error form segment">
-  <div class="ui error message">
-    <div class="header">Action Forbidden</div>
-    <p>You can only sign up for an account once with a given e-mail address.</p>
-  </div>
-    <div class="field">
-      <label>Name</label>
-      <input placeholder="Name" type="text" name = "name">
-    </div>
-  <div class="field">
-    <label>Gender</label>
-    <div class="ui selection dropdown">
-      <div class="default text">Select Gender</div>
-      <i class="dropdown icon"></i>
-      <input type="hidden" name="gender">
-      <div class="menu">
-        <div class="item" data-value="male">Male</div>
-        <div class="item" data-value="female">Female</div>
-      </div>
-    </div>
-  </div>
-  <div class="field">
-    <label>Username</label>
-    <input placeholder="Username" type="text">
-  </div>
-  <div class="field">
-		<label for="Cidadao-estadoCivil">Estado Civil</label>
-		<div class="ui selection dropdown">
-			<input type="hidden" name="Cidadao-estadoCivil">
-			<i class="dropdown icon"></i>
-			<div class="default text">Estado Civil</div>
-			<div class="menu">
-				<div class="item" data-value="CASADO">CASADO</div>
-				<div class="item" data-value="DIVORCIADO">DIVORCIADO</div>
-				<div class="item" data-value="SOLTEIRO">SOLTEIRO</div>
-				<div class="item" data-value="VIUVO">VIUVO</div>
+<div id="areaDoFormPessoaFisica">
+	<form id="formPessoaFisica" class="ui error form segment">
+	  <div class="ui error message">
+	    <div class="header">Action Forbidden</div>
+	    <p>You can only sign up for an account once with a given e-mail address.</p>
+	  </div>
+	    <div class="field">
+	      <label>Name</label>
+	      <input placeholder="Name" type="text" name = "name">
+	    </div>
+	  <div class="field">
+	    <label>Gender</label>
+	    <div class="ui selection dropdown">
+	      <div class="default text">Select Gender</div>
+	      <i class="dropdown icon"></i>
+	      <input type="hidden" name="gender">
+	      <div class="menu">
+	        <div class="item" data-value="male">Male</div>
+	        <div class="item" data-value="female">Female</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="field">
+			<label for="Cidadao-estadoCivil">Estado Civil</label>
+			<div class="ui selection dropdown">
+				<input type="hidden" name="Cidadao-estadoCivil">
+				<i class="dropdown icon"></i>
+				<div class="default text">Estado Civil</div>
+				<div class="menu">
+					<div class="item" data-value="CASADO">CASADO</div>
+					<div class="item" data-value="DIVORCIADO">DIVORCIADO</div>
+					<div class="item" data-value="SOLTEIRO">SOLTEIRO</div>
+					<div class="item" data-value="VIUVO">VIUVO</div>
+				</div>
 			</div>
 		</div>
-	</div>
-  <div class="field">
-		<label >Data de Nascimento</label>
-		<input name="dataNascimentoPessoaFisica" id ="dataNascimentoPessoaFisica" placeholder="dd/mm/aaaa" type="text" class="dataNascimentoPessoaFisica">
-		<div id="msgData_Cidadao-dataDeNascimento" class="mensagemErro">
-			
+	  <div class="field">
+			<label >Data de Nascimento</label>
+			<input name="dataNascimentoPessoaFisica" id ="dataNascimentoPessoaFisica" placeholder="dd/mm/aaaa" type="text" class="dataNascimentoPessoaFisica">
+			<div id="msgData_Cidadao-dataDeNascimento" class="mensagemErro">
+				
+			</div>
+	   </div>
+	   <div class="field">
+			<label for="Cidadao-nacionalidade">Nacionalidade</label> <input name="Cidadao-nacionalidade" placeholder="Nacionalidade" type="text">
 		</div>
-   </div>
-  <div id="butaoPessoaFisica" class="ui submit button">Submit</div>
-</form>
+		<div class="field">
+			<label for="Cidadao-cor">Ra&ccedil;a</label>
+			<div id="MenuItem-Cidadao-cor" class="ui selection dropdown">
+				<input type="hidden" name="Cidadao-cor">
+				<div class="default text">Raça</div>
+				<i class="dropdown icon"></i>
+				<div class="menu">
+					<div class="item" data-value="AMARELO">AMARELO</div>
+					<div class="item" data-value="BRANCO">BRANCO</div>
+					<div class="item" data-value="NEGRO">NEGRO</div>
+					<div class="item" data-value="PARDO">PARDO</div>
+				</div>
+			</div>
+		</div>
+		<div class="field">
+		<label>Endereço</label>
+		<input name="endereco" placeholder="Endereço" type="text">
+		</div>
+	  <div id="butaoPessoaFisica" class="ui submit button">Submit</div>
+	</form>
+</div>
 </body>
 </html>

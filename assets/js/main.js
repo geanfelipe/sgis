@@ -5,6 +5,13 @@ $(function(){
 		
 	});
 	$('.ui.dropdown').dropdown();
+	
+	$('#areaDoFormPessoaFisica').hide();
+
+	$('#irParaCadastroPessoal').click(function () {
+			$('#areaDoFormPessoaFisica').show();		
+	});
+
 	$('.ui.form').form({
     name: {
       identifier  : 'name',
@@ -12,6 +19,10 @@ $(function(){
         {
           type   : 'empty',
           prompt : 'Please enter your name'
+        },
+        {
+          type   : 'length[4]',
+          prompt : 'Your name must be at least 4 characters'
         }
       ]
     },
@@ -64,6 +75,42 @@ $(function(){
         }
       ]
     },
+    cor: {
+      identifier : 'Cidadao-cor',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter a race'
+        }
+      ]
+    },
+    estadoCivil: {
+      identifier : 'Cidadao-estadoCivil',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'estado civil'
+        }
+      ]
+    },
+    nacionalidade: {
+      identifier : 'Cidadao-nacionalidade',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'estado civil'
+        }
+      ]
+    },
+    endereco: {
+      identifier : 'endereco',
+      rules: [
+        {
+          type   : 'empty',
+          prompt : 'Please enter a endress'
+        }
+      ]
+    },
 
   });
 
@@ -82,7 +129,8 @@ jQuery.validator.addMethod("dataNascimentoPessoaFisica", function (value, elemen
     if (mes == 2 && (dia > 29 || (dia == 29 && ano % 4 != 0))) return (this.optional(element) || false);
     if (ano < 1900) return (this.optional(element) || false);
     return (this.optional(element) || true);
-}, "Informe uma data válida");  // Mensagem padrão 
+}, "Informe uma data válida (dia/mes/ano)");  // Mensagem padrão 
 
-   $("#formPessoaFisica").validate();
+    $("#formPessoaFisica").validate()
+    
 	});
