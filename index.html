@@ -11,7 +11,6 @@
 	<script type="text/javascript" src="assets/js/jquery.validate.js"></script>
 	<link rel="stylesheet" href="Semantic-UI-1.11.6/dist/semantic.min.css">
 	<link rel="import" href="form.html">
-
 </head>
 <body>
 <div class="ui segment">
@@ -156,7 +155,7 @@
 </div>
 
 <div id="areaDoFormPessoaJuridica">
-	<form id="formPessoajuridica" class="ui error form segment">
+	<form method="post"id="formPessoajuridica" class="ui error form segment">
 	  	<div class="ui error message">
 		    <div class="header">Action Forbidden</div>
 		    <p>You can only sign up for an account once with a given e-mail address.</p>
@@ -165,13 +164,13 @@
 			<label>Razão social</label> <input name="razao-social" placeholder="Razão social" type="text">
 		</div>
 		<div class="field">
-			<label>CNPJ</label> <input name="ncpj" placeholder="CNPJ" type="text">
+			<label>CNPJ</label> <input id = "cnpj" name="ncpj" placeholder="CNPJ" type="text">
 		</div>
 		<div class="field">
-			<label>	Telefone</label> <input name="Telefone" placeholder="Telefone " type="text">
+			<label>	Telefone</label> <input id="telefone" name="Telefone" placeholder="Telefone " type="text">
 		</div>
 		<div class="field">
-			<label>	Email </label> <input name="email" placeholder="Email " type="text">
+			<label>	Email </label> <input id="emailJuridico"name="email" placeholder="Email " type="text">
 		</div>
 	  <div id="butaoPessoaJuridica" class="ui submit button">Submit</div>
 	</form>
